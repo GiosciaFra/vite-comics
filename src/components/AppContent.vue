@@ -1,7 +1,27 @@
 <script>
-
+export default {
+    name: 'AppContent',
+}
 </script>
 
-<template></template>
+<template>
+    <div id="content">
+        <h2>content</h2>
+    </div>
+</template>
 
-<style></style>
+<style lang="scss">
+@use '../styles/variables.scss' as *;
+
+#content {
+    background-color: black;
+    height: 150px;
+
+    h2 {
+        padding: 50px 80px;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+</style>
