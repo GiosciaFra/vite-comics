@@ -1,6 +1,6 @@
 <script>
 
-import AppNav from '../src/components/AppNav';
+import AppNav from './components/AppNav.vue';
 
 export default {
   components: {
@@ -13,4 +13,6 @@ export default {
   <AppNav></AppNav>
 </template>
 
-<style></style>
+<style lang="scss">
+@use './styles/general.scss' as *;
+</style>
