@@ -2,11 +2,14 @@
 
 import AppNav from './components/AppNav.vue';
 import AppContent from './components/AppContent.vue';
+import AppLinks from './components/AppLinks.vue';
 
 export default {
   components: {
     AppNav,
-    AppContent
+    AppContent,
+    AppLinks,
+
   }
 }
 </script>
@@ -14,6 +17,7 @@ export default {
 <template>
   <AppNav></AppNav>
   <AppContent></AppContent>
+  <AppLinks></AppLinks>
 </template>
 
 <style lang="scss">

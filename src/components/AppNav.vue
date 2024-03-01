@@ -27,12 +27,14 @@ export default {
 
 <template>
     <nav>
-        <img class="logo" src="/img/dc-logo.png" alt="">
-        <ul class="links">
-            <li v-for="(currentLink, index) in links" :class="index == activeLinkIndex ? 'active' : ''">
-                {{ currentLink }}
-            </li>
-        </ul>
+        <div class="container">
+            <img class="logo" src="/img/dc-logo.png" alt="DC Logo">
+            <ul class="links">
+                <li v-for="(currentLink, index) in links" :class="index == activeLinkIndex ? 'active' : ''">
+                    {{ currentLink }}
+                </li>
+            </ul>
+        </div>
     </nav>
 </template>
 
@@ -46,21 +48,52 @@ nav {
 
     height: 120px;
 
-    padding: 0 200px;
+    font-family: 'Barlow Condensed', sans-serif;
 
-    ul {
+    .container {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .logo {
+        height: 80px;
+    }
+
+    ul.links {
+        display: flex;
+        align-items: stretch;
         gap: 30px;
+        align-items: stretch;
+        list-style-type: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0;
 
         li {
-            list-style-type: none;
-            text-transform: uppercase;
-            font-size: 14px;
-            font-weight: 600;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            &.hover {
+                cursor: pointer;
+            }
 
             &.active {
                 color: $blueColor;
+                position: relative;
+            }
 
+            &.active::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 5px;
+                background-color: $blueColor;
+                top: 64px;
+                left: 0;
             }
 
         }
