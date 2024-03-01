@@ -3,6 +3,7 @@
 import AppNav from './components/AppNav.vue';
 import AppContent from './components/AppContent.vue';
 import AppFooter from './components/AppFooter.vue';
+
 export default {
   components: {
     AppNav,
