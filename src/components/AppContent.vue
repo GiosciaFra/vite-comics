@@ -90,31 +90,41 @@ export default {
 
 <template>
     <div id="hero">
+
+
         <div class="jumbo">
             <img src="../../public/img/jumbotron.jpg" alt="">
         </div>
-        <div class="current-series">
-            Current Series
-        </div>
-        <div class="comics">
+        <div class="comics container">
+            <div class="current-series">
+                Current Series
+            </div>
             <AppComics v-for="actualComic in comics" :name="actualComic.series" :image="actualComic.thumb">
             </AppComics>
+            <button class="btn">
+                Load more
+            </button>
         </div>
-
-        <button class="btn">
-            Load more
-        </button>
 
     </div>
 </template>
 
 <style lang="scss">
+@use '../styles/general.scss' as *;
 @use '../styles/variables.scss' as *;
 
 #hero {
+
+    background-color: #1c1c1c;
+
     .jumbo {
         height: 400px;
         overflow: hidden;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     }
 
     .comics {
@@ -122,11 +132,36 @@ export default {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        height: 670px;
         padding: 52px 30px;
         gap: 50px 27px;
         color: white;
-        background-color: #1c1c1c;
+        font-family: 'Barlow Condensed', sans-serif;
+
+        position: relative;
+
+        .current-series {
+            position: absolute;
+            bottom: 720px;
+            left: 0;
+
+            background-color: $blueColor;
+            padding: 5px 23px;
+            text-transform: uppercase;
+            font-weight: bolder;
+
+            font-size: 26px;
+
+
+        }
+
+        .btn {
+            padding: 15px 60px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border: none;
+            background-color: $blueColor;
+            color: white;
+        }
     }
 }
 </style>

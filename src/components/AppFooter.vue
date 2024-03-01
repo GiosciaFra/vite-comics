@@ -5,7 +5,7 @@ export default {
     name: 'AppFooter',
 
     components: {
-        AppShop
+        AppShop,
     },
 
     data() {

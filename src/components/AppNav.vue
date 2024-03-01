@@ -89,7 +89,7 @@ nav {
                 width: 100%;
                 height: 5px;
                 background-color: $blueColor;
-                top: 66px;
+                top: 67px;
                 left: 0;
             }
 
