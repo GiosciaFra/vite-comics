@@ -53,17 +53,22 @@ export default {
 <template>
     <footer>
         <div class="footer-top">
-            <div class="links container">
-                <div v-for="currentLinkList in linkList" class="link-list">
-                    <h4>{{ currentLinkList.title }}</h4>
-                    <ul>
-                        <li v-for="currentLink in currentLinkList.links">{{ currentLink }}</li>
+            <div class="container">
+                <div class="links">
+                    <div v-for="currentLinkList in linkList" class="link-list">
+                        <h4>{{ currentLinkList.title }}</h4>
+                        <ul>
+                            <li v-for="currentLink in currentLinkList.links">{{ currentLink }}</li>
 
-                    </ul>
+                        </ul>
+                    </div>
+
                 </div>
 
-            </div>
-            <div class="big-logo">
+                <div class="big-logo">
+                    <img src="../../public/img/dc-logo-bg.png" alt="">
+                </div>
+
             </div>
         </div>
     </footer>
@@ -82,6 +87,15 @@ footer {
         height: 370px;
         background-image: url('/img/footer-bg.jpg');
         background-position: cover;
+
+        overflow: hidden;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
     }
 
     .links {
@@ -102,7 +116,7 @@ footer {
 
         ul {
             color: #ccc;
-            font-size: .9em;
+            font-size: .8em;
         }
     }
 }
