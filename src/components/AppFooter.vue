@@ -1,6 +1,12 @@
 <script>
+import AppLinks from './AppLinks.vue';
+
 export default {
     name: 'AppFooter',
+
+    component: {
+        AppLinks
+    },
 
     data() {
         return {
@@ -75,6 +81,8 @@ export default {
 
 <template>
     <footer>
+        <AppLinks></AppLinks>
+
         <div class="footer-top">
             <div class="container">
                 <div class="links">
@@ -139,61 +147,61 @@ footer {
             align-items: center;
             height: 100%;
         }
-    }
 
-    .links {
-        display: flex;
-        flex-flow: column wrap;
-        align-content: flex-start;
-        gap: 20px 30px;
-        height: 100%;
-        padding: 20px 0;
-
-        h4 {
-            color: white;
-            text-transform: uppercase;
-            font-size: 1.5em;
-            font-family: 'Barlow Condensed', sans-serif;
-            margin-bottom: 10px;
-        }
-
-        ul {
-            color: #ccc;
-            font-size: .8em;
-        }
-    }
-}
-
-.footer-bottom {
-
-    padding: 20px 0;
-    background-color: #303030;
-
-    .btn {
-        color: white;
-        padding: 14px 18px;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 1em;
-        background-color: transparent;
-        border: solid 1px $blueColor;
-    }
-
-    .container {
-        display: flex;
-        justify-content: space-between;
-
-        .social-links,
-        ul {
+        .links {
             display: flex;
-            align-items: center;
-            gap: 18px;
+            flex-flow: column wrap;
+            align-content: flex-start;
+            gap: 20px 30px;
+            height: 100%;
+            padding: 20px 0;
 
-            strong {
-                color: $blueColor;
+            h4 {
+                color: white;
                 text-transform: uppercase;
+                font-size: 1.5em;
                 font-family: 'Barlow Condensed', sans-serif;
-                font-size: 1.3em;
+                margin-bottom: 10px;
+            }
+
+            ul {
+                color: #ccc;
+                font-size: .8em;
+            }
+        }
+    }
+
+    .footer-bottom {
+
+        padding: 20px 0;
+        background-color: #303030;
+
+        .btn {
+            color: white;
+            padding: 14px 18px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1em;
+            background-color: transparent;
+            border: solid 1px $blueColor;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+
+            .social-links,
+            ul {
+                display: flex;
+                align-items: center;
+                gap: 18px;
+
+                strong {
+                    color: $blueColor;
+                    text-transform: uppercase;
+                    font-family: 'Barlow Condensed', sans-serif;
+                    font-size: 1.3em;
+                }
             }
         }
     }

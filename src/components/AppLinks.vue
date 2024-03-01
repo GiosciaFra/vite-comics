@@ -33,10 +33,42 @@ export default {
 
 <template>
     <div class="iconLinks">
-        <div v-for="(actualIcon, index) in icons" class="icon">
+        <div class="container">
+            <div class="row">
+                <div v-for="icon in icons" class="col">
+                    <img :src="'/img/' + icon.img" :alt="icon.text">
+                    <span>{{ icon.text }}</span>
 
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
-<style></style>
+<style lang="scss">
+@use '../styles/variables' as *;
+
+.iconsLinks {
+    background-color: $blueColor;
+
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 70px;
+        padding: 50px;
+
+        .col {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            height: 55px;
+
+            img {
+                max-width: 55px;
+                height: 100%;
+            }
+        }
+    }
+}
+</style>
