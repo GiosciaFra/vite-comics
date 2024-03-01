@@ -77,9 +77,6 @@ nav {
             display: flex;
             align-items: center;
 
-            &.hover {
-                cursor: pointer;
-            }
 
             &.active {
                 color: $blueColor;
@@ -92,7 +89,7 @@ nav {
                 width: 100%;
                 height: 5px;
                 background-color: $blueColor;
-                top: 64px;
+                top: 66px;
                 left: 0;
             }
 

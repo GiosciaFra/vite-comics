@@ -1,28 +1,28 @@
 <script>
 export default {
-    name: 'AppLinks',
+    name: 'AppShop',
     data() {
         return {
             icons: [
                 {
-                    img: '/img/buy-comics-digital-comics.png',
-                    text: 'digital comics'
+                    image: 'buy-comics-digital-comics.png',
+                    title: 'digital comics'
                 },
                 {
-                    img: '/img/buy-comics-merchandise.png',
-                    text: 'dc merchandise'
+                    image: 'buy-comics-merchandise.png',
+                    title: 'dc merchandise'
                 },
                 {
-                    img: '/img/buy-comics-subscriptions.png',
-                    text: 'subscription'
+                    image: 'buy-comics-subscriptions.png',
+                    title: 'subscription'
                 },
                 {
-                    img: '/img/buy-comics-shop-locator.png',
-                    text: 'comic shop locator'
+                    image: 'buy-comics-shop-locator.png',
+                    title: 'comic shop locator'
                 },
                 {
-                    img: '/img/buy-dc-power-visa.svg',
-                    text: 'dc power visa'
+                    image: 'buy-dc-power-visa.svg',
+                    title: 'dc power visa'
                 },
             ]
         }
@@ -36,8 +36,8 @@ export default {
         <div class="container">
             <div class="row">
                 <div v-for="icon in icons" class="col">
-                    <img :src="'/img/' + icon.img" :alt="icon.text">
-                    <span>{{ icon.text }}</span>
+                    <img :src="'/img/' + icon.image" :alt="icon.title">
+                    <span>{{ icon.title }}</span>
 
                 </div>
             </div>
@@ -48,21 +48,25 @@ export default {
 <style lang="scss">
 @use '../styles/variables' as *;
 
-.iconsLinks {
+.iconLinks {
     background-color: $blueColor;
+    color: white;
+    text-transform: uppercase;
 
     .row {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 70px;
+        gap: 40px;
         padding: 50px;
+
 
         .col {
             display: flex;
             align-items: center;
             gap: 20px;
             height: 55px;
+            white-space: nowrap;
 
             img {
                 max-width: 55px;

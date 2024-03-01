@@ -1,11 +1,11 @@
 <script>
-import AppLinks from './AppLinks.vue';
+import AppShop from './AppShop.vue';
 
 export default {
     name: 'AppFooter',
 
-    component: {
-        AppLinks
+    components: {
+        AppShop
     },
 
     data() {
@@ -59,7 +59,7 @@ export default {
 
 <template>
     <footer>
-        <AppLinks></AppLinks>
+        <AppShop></AppShop>
 
         <div class="footer-top">
             <div class="container">
