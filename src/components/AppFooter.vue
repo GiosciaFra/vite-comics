@@ -43,6 +43,29 @@ export default {
                     name: 'periscope',
                     icon: '/img/footer-periscope.png'
                 },
+            ],
+
+            socials: [
+                {
+                    name: 'facebook',
+                    icon: '/img/footer-facebook.png'
+                },
+                {
+                    name: 'twitter',
+                    icon: '/img/footer-twitter.png'
+                },
+                {
+                    name: 'youtube',
+                    icon: '/img/footer-youtube.png'
+                },
+                {
+                    name: 'pinterest',
+                    icon: '/img/footer-pinterest.png'
+                },
+                {
+                    name: 'periscope',
+                    icon: '/img/footer-periscope.png'
+                },
             ]
         }
     }
@@ -71,11 +94,31 @@ export default {
 
             </div>
         </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="cta">
+                    <button class="btn">
+                        Sign-up now!
+                    </button>
+                </div>
+                <div class="social-links">
+                    <strong>Follow Us</strong>
+                    <ul>
+                        <li v-for="currentSocial in socials">
+                            <img :src="currentSocial.icon" :alt="currentSocial.name">
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
 </template>
 
 <style lang="scss">
 @use '../styles/general' as *;
+@use '../styles/variables' as *;
 
 footer {
     ul {
@@ -117,6 +160,41 @@ footer {
         ul {
             color: #ccc;
             font-size: .8em;
+        }
+    }
+}
+
+.footer-bottom {
+
+    padding: 20px 0;
+    background-color: #303030;
+
+    .btn {
+        color: white;
+        padding: 14px 18px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1em;
+        background-color: transparent;
+        border: solid 1px $blueColor;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        .social-links,
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+
+            strong {
+                color: $blueColor;
+                text-transform: uppercase;
+                font-family: 'Barlow Condensed', sans-serif;
+                font-size: 1.3em;
+            }
         }
     }
 }

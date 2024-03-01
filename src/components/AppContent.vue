@@ -15,7 +15,7 @@ export default {
 
 #content {
     background-color: black;
-    height: 150px;
+    height: 100px;
 
     h2 {
         padding: 50px 80px;
