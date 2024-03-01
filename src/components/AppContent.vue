@@ -139,6 +139,8 @@ export default {
 
         position: relative;
 
+
+
         .current-series {
             position: absolute;
             bottom: 720px;

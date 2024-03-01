@@ -22,9 +22,14 @@ export default {
 .comic {
     display: flex;
     flex-flow: column;
-    align-items: center;
+    align-items: start;
     width: calc(100% / 6 - 27px / 6 * 5);
     gap: 20px;
+
+    h3 {
+        font-weight: 400;
+        text-transform: uppercase;
+    }
 
     .comic-image {
         width: 185px;
